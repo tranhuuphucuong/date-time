@@ -62,30 +62,32 @@ __webpack_require__.r(__webpack_exports__);
 class AppComponent {
     constructor() {
         this.date = new Date();
-        this.year = '';
-        this.month = '';
-        this.day = '';
-        this.hour = '';
-        this.minute = '';
-        this.second = '';
-        this.milliseconds = '';
+        this.year = "";
+        this.month = "";
+        this.day = "";
+        this.hour = "";
+        this.minute = "";
+        this.second = "";
+        this.milliseconds = "";
         this.dateTime = {};
         this.dateTimeUTC = {};
         this.dateTimeLocal = {};
-        this.dateTimeCustom = 'abcd';
+        this.dateTimeCustom = "abcd";
         this.timestamp = Date.now();
     }
     ngOnInit() {
         setInterval(() => {
             const now = new Date();
-            this.dateTimeCustom = Object(src_utils_timezone__WEBPACK_IMPORTED_MODULE_2__["formatToTimeZone"])(now, 'yyyy MM dd, HH:mm:ss.SSS', { timeZone: 'Asia/Tokyo' });
-            this.year = Object(date_fns__WEBPACK_IMPORTED_MODULE_1__["format"])(now, 'yyyy');
-            this.month = Object(date_fns__WEBPACK_IMPORTED_MODULE_1__["format"])(now, 'MM');
-            this.day = Object(date_fns__WEBPACK_IMPORTED_MODULE_1__["format"])(now, 'dd');
-            this.hour = Object(date_fns__WEBPACK_IMPORTED_MODULE_1__["format"])(now, 'HH');
-            this.minute = Object(date_fns__WEBPACK_IMPORTED_MODULE_1__["format"])(now, 'mm');
-            this.second = Object(date_fns__WEBPACK_IMPORTED_MODULE_1__["format"])(now, 'ss');
-            this.milliseconds = Object(date_fns__WEBPACK_IMPORTED_MODULE_1__["format"])(now, 'SSS');
+            this.dateTimeCustom = Object(src_utils_timezone__WEBPACK_IMPORTED_MODULE_2__["formatToTimeZone"])(now, "yyyy MM dd, HH:mm:ss.SSS", {
+                timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+            });
+            this.year = Object(date_fns__WEBPACK_IMPORTED_MODULE_1__["format"])(now, "yyyy");
+            this.month = Object(date_fns__WEBPACK_IMPORTED_MODULE_1__["format"])(now, "MM");
+            this.day = Object(date_fns__WEBPACK_IMPORTED_MODULE_1__["format"])(now, "dd");
+            this.hour = Object(date_fns__WEBPACK_IMPORTED_MODULE_1__["format"])(now, "HH");
+            this.minute = Object(date_fns__WEBPACK_IMPORTED_MODULE_1__["format"])(now, "mm");
+            this.second = Object(date_fns__WEBPACK_IMPORTED_MODULE_1__["format"])(now, "ss");
+            this.milliseconds = Object(date_fns__WEBPACK_IMPORTED_MODULE_1__["format"])(now, "SSS");
             this.timestamp = now.getTime();
             this.dateTime = {
                 year: this.year,
@@ -95,17 +97,17 @@ class AppComponent {
                 minute: this.minute,
                 second: this.second,
                 milliseconds: this.milliseconds,
-                timezone: 'local'
+                timezone: "local",
             };
             this.dateTimeUTC = {
-                year: Object(src_utils_timezone__WEBPACK_IMPORTED_MODULE_2__["formatToTimeZone"])(now, 'yyyy', { timeZone: 'UTC' }),
-                month: Object(src_utils_timezone__WEBPACK_IMPORTED_MODULE_2__["formatToTimeZone"])(now, 'MM', { timeZone: 'UTC' }),
-                day: Object(src_utils_timezone__WEBPACK_IMPORTED_MODULE_2__["formatToTimeZone"])(now, 'dd', { timeZone: 'UTC' }),
-                hour: Object(src_utils_timezone__WEBPACK_IMPORTED_MODULE_2__["formatToTimeZone"])(now, 'HH', { timeZone: 'UTC' }),
-                minute: Object(src_utils_timezone__WEBPACK_IMPORTED_MODULE_2__["formatToTimeZone"])(now, 'mm', { timeZone: 'UTC' }),
-                second: Object(src_utils_timezone__WEBPACK_IMPORTED_MODULE_2__["formatToTimeZone"])(now, 'ss', { timeZone: 'UTC' }),
-                milliseconds: Object(src_utils_timezone__WEBPACK_IMPORTED_MODULE_2__["formatToTimeZone"])(now, 'SSS', { timeZone: 'UTC' }),
-                timezone: 'UTC'
+                year: Object(src_utils_timezone__WEBPACK_IMPORTED_MODULE_2__["formatToTimeZone"])(now, "yyyy", { timeZone: "UTC" }),
+                month: Object(src_utils_timezone__WEBPACK_IMPORTED_MODULE_2__["formatToTimeZone"])(now, "MM", { timeZone: "UTC" }),
+                day: Object(src_utils_timezone__WEBPACK_IMPORTED_MODULE_2__["formatToTimeZone"])(now, "dd", { timeZone: "UTC" }),
+                hour: Object(src_utils_timezone__WEBPACK_IMPORTED_MODULE_2__["formatToTimeZone"])(now, "HH", { timeZone: "UTC" }),
+                minute: Object(src_utils_timezone__WEBPACK_IMPORTED_MODULE_2__["formatToTimeZone"])(now, "mm", { timeZone: "UTC" }),
+                second: Object(src_utils_timezone__WEBPACK_IMPORTED_MODULE_2__["formatToTimeZone"])(now, "ss", { timeZone: "UTC" }),
+                milliseconds: Object(src_utils_timezone__WEBPACK_IMPORTED_MODULE_2__["formatToTimeZone"])(now, "SSS", { timeZone: "UTC" }),
+                timezone: "UTC",
             };
             this.dateTimeLocal = {
                 year: this.year,
@@ -115,7 +117,7 @@ class AppComponent {
                 minute: this.minute,
                 second: this.second,
                 milliseconds: this.milliseconds,
-                timezone: null
+                timezone: null,
             };
         }, 500);
     }
@@ -164,8 +166,8 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
-                selector: 'app-root',
-                templateUrl: './app.component.html',
+                selector: "app-root",
+                templateUrl: "./app.component.html",
             }]
     }], null, null); })();
 
