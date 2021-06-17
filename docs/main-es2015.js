@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/cuongtran/cuong/date-time/date-time/src/main.ts */"zUnb");
+module.exports = __webpack_require__(/*! /Users/cuongtran/cuong/date-time/src/main.ts */"zUnb");
 
 
 /***/ }),
