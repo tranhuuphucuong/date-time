@@ -1,0 +1,77 @@
+<div *ngIf="!timestamp" class="part">
+  <span class="partial date">
+    <span class="brace top"></span>
+    <span class="des top">Date Components</span>
+    <span class="partial">
+      <span class="brace bottom"></span>
+      <span class="des bottom">Year</span>
+      <!-- <span class="des bottom">YY</span> -->
+      {{dateTime.year}}
+    </span>
+    <span class="sympol">-</span>
+    <span class="partial">
+      <span class="brace bottom"></span>
+      <span class="des bottom">Month</span>
+      {{dateTime.month}}
+    </span>
+    <span class="sympol">-</span>
+    <span class="partial">
+      <span class="brace bottom"></span>
+      <span class="des bottom">Day</span>
+      {{dateTime.day}}
+    </span>
+  </span>
+  <span class="partial T">
+    <span class="brace top"></span>
+    <span class="des top">Separator</span>
+    <span class="partial small">T</span>
+  </span>
+  <span class="partial time">
+    <span class="brace top"></span>
+    <span class="des top">Time Components</span>
+    <span class="partial">
+      <span class="brace bottom"></span>
+      <span class="des bottom">Hour</span>
+      {{dateTime.hour}}
+    </span>
+    <span class="sympol">:</span>
+    <span class="partial">
+      <span class="brace bottom"></span>
+      <span class="des bottom">Minute</span>
+      {{dateTime.minute}}
+    </span>
+    <span class="sympol">:</span>
+    <span class="partial">
+      <span class="brace bottom"></span>
+      <span class="des bottom">Second</span>
+      {{dateTime.second}}
+    </span>
+    <span class="sympol">.</span>
+    <span class="partial">
+      <span class="brace bottom"></span>
+      <span class="des bottom">milliseconds</span>
+      {{dateTime.milliseconds}}
+    </span>
+  </span>
+  <span *ngIf="dateTime.timezone" class="partial timezone" style="margin-left: 10px; min-width: 55px;">
+    <span class="brace top"></span>
+    <span class="des top">Time zone</span>
+    <span *ngIf="dateTime.timezone === 'UTC'" class="partial small">Z</span>
+    <ng-container *ngIf="dateTime.timezone === 'local'">
+      <span class="sympol">+</span>
+      <span class="partial">07</span>
+      <span class="sympol">:</span>
+      <span class="partial">00</span>
+    </ng-container>
+  </span>
+</div>
+
+<div *ngIf="timestamp"  class="part">
+  <span class="partial time">
+    <span class="partial">
+      <span class="brace bottom"></span>
+      <span class="des bottom">milliseconds</span>
+      {{timestamp}}
+    </span>
+  </span>
+</div>
