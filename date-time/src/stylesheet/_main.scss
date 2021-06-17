@@ -10,9 +10,8 @@
   --purple: #ffff73;
 }
 
-
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   line-height: 1;
   position: relative;
   color: #ffffff;
@@ -20,15 +19,15 @@ body {
 
 body:before {
   display: block;
-  content: '';
+  content: "";
   position: fixed;
   top: 0;
-  right:0;
+  right: 0;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../assets/bg.jpeg');
+  background-image: url("../assets/bg.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -37,15 +36,15 @@ body:before {
 
 body:after {
   display: block;
-  content: '';
+  content: "";
   position: fixed;
   top: 0;
-  right:0;
+  right: 0;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 100%;
-  background: rgba(3,3,3,0.73);
+  background: rgba(3, 3, 3, 0.73);
   z-index: 1;
 }
 
@@ -53,7 +52,7 @@ h1 {
   font-size: 60px;
   margin-top: 0;
   margin-bottom: 60px;
-  height: 70vh;
+  // height: 70vh;
   &.fixed-title {
     position: sticky;
     top: 150px;
@@ -111,9 +110,20 @@ h1 {
 
 .partial.T .brace {
   padding-bottom: 11.5px;
-  background-image: 
-  radial-gradient(circle at 2.5px -2px, rgb(166 53 53 / 0%) 17.5px, currentColor -6.5px, currentColor 19.5px, rgb(8 131 12 / 0%) 0.5px),
-  radial-gradient(circle at 32.5px -1px, rgb(166 53 53 / 0%) 16.5px, currentColor 5.5px, currentColor 18.5px, rgba(255,255,255,0) 7.5px);
+  background-image: radial-gradient(
+      circle at 2.5px -2px,
+      rgb(166 53 53 / 0%) 17.5px,
+      currentColor -6.5px,
+      currentColor 19.5px,
+      rgb(8 131 12 / 0%) 0.5px
+    ),
+    radial-gradient(
+      circle at 32.5px -1px,
+      rgb(166 53 53 / 0%) 16.5px,
+      currentColor 5.5px,
+      currentColor 18.5px,
+      rgba(255, 255, 255, 0) 7.5px
+    );
 }
 .partial.T .brace:before {
   width: calc(50% + 5px);
@@ -135,7 +145,6 @@ h1 {
 .partial.timezone .brace {
   color: var(--purple);
 }
-
 
 .sympol {
   margin: 0 10px;

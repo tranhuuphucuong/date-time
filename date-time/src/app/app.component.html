@@ -1,32 +1,23 @@
-
 <div class="container center">
   <h1 class="fixed-title">ISO 8601</h1>
-  <h1>{{dateTimeCustom}}</h1>
+  <!-- <h1>{{dateTimeCustom}}</h1> -->
   <div class="article">
     <p class="title">Full date</p>
-    <date-time
-    [dateTime]="dateTimeUTC"
-    ></date-time>
+    <date-time [dateTime]="dateTimeUTC"></date-time>
   </div>
 
   <div class="article">
     <p class="title">Full date</p>
-    <date-time
-    [dateTime]="dateTime"
-    ></date-time>
+    <date-time [dateTime]="dateTime"></date-time>
   </div>
 
   <div class="article">
     <p class="title">Timestamp</p>
-    <date-time
-      [timestamp]="timestamp"
-    ></date-time>
+    <date-time [timestamp]="timestamp"></date-time>
   </div>
 
   <div class="article">
     <p class="title">Not a full date</p>
-    <date-time
-    [dateTime]="dateTimeLocal"
-    ></date-time>
+    <date-time [dateTime]="dateTimeLocal"></date-time>
   </div>
 </div>
